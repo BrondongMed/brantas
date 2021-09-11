@@ -222,7 +222,7 @@
             <a href="/sungai/{{ $sungai->id }}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-               {{ $sungai->nama_sungai }}  {{ $sungai->id }} 
+               {{ $sungai->nama_sungai }}
               </p>
             </a>
             @endforeach
