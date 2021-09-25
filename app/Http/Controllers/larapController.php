@@ -8,6 +8,6 @@ class larapController extends Controller
 {
     public function larap()
     {
-        echo "kesini";
+        return view('admin.index');
     }
 }
