@@ -24,9 +24,15 @@ Route::post('/sungai/add', 'sungaiController@add');
 
 Route::get('/lh', 'sungaiController@lh');
 Route::post('/lh/add', 'sungaiController@lhadd');
+Route::get('/admin/delLh/{id}', 'sungaiController@delLh');
 
 Route::get('/larap', 'larapController@larap');
-Route::post('/larap/add', 'sungaiController@larapadd');
+Route::post('/larap/add', 'ç@larapadd');
 
 Route::get('/home', 'sungaiController@home')->name('home');
+Route::get('/admin/delSungai/{id}', 'sungaiController@delSungai');
+Route::get('/admin/{id}/edit', 'sungaiController@edit');
+Route::put('/admin/update', 'sungaiController@update');
+
+
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');

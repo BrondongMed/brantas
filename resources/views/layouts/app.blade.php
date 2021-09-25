@@ -28,6 +28,10 @@
     <link rel="stylesheet" href="{{ asset('/tempek/plugins/daterangepicker/daterangepicker.css') }}">
     <!-- summernote -->
     <link rel="stylesheet" href="{{ asset('/tempek/plugins/summernote/summernote-bs4.min.css') }}">
+    {{-- maps --}}
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -101,7 +105,7 @@
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
                             <div class="media">
-                                <img src="dist/img/user8-128x128.jpg" alt="User Avatar"
+                                <img src="{{ asset('tempek/dist/img/user8-128x128.jpg') }}" alt="User Avatar"
                                     class="img-size-50 img-circle mr-3">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
@@ -119,7 +123,7 @@
                         <a href="#" class="dropdown-item">
                             <!-- Message Start -->
                             <div class="media">
-                                <img src="dist/img/user3-128x128.jpg" alt="User Avatar"
+                                <img src="{{ asset('tempek/dist/img/user3-128x128.jpg') }}" alt="User Avatar"
                                     class="img-size-50 img-circle mr-3">
                                 <div class="media-body">
                                     <h3 class="dropdown-item-title">
@@ -245,10 +249,10 @@
     <!-- ChartJS -->
     <script src="{{ asset('/tempek/plugins/chart.js/Chart.min.js') }}"></script>
     <!-- Sparkline -->
-    <script src="{{ asset('/tempek/plugins/sparklines/sparkline.js') }}"></script>
+    {{-- <script src="{{ asset('/tempek/plugins/sparklines/sparkline.js') }}"></script> --}}
     <!-- JQVMap -->
-    <script src="{{ asset('/tempek/plugins/jqvmap/jquery.vmap.min.js') }}"></script>
-    <script src="{{ asset('/tempek/plugins/jqvmap/maps/jquery.vmap.usa.js') }}"></script>
+    {{-- <script src="{{ asset('/tempek/plugins/jqvmap/jquery.vmap.min.js') }}"></script>
+    <script src="{{ asset('/tempek/plugins/jqvmap/maps/jquery.vmap.usa.js') }}"></script> --}}
     <!-- jQuery Knob Chart -->
     <script src="{{ asset('/tempek/plugins/jquery-knob/jquery.knob.min.js') }}"></script>
     <!-- daterangepicker -->
@@ -265,7 +269,27 @@
     <!-- AdminLTE for demo purposes -->
     <script src="{{ asset('/tempek/dist/js/demo.js') }}"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="{{ asset('/tempek/dist/js/pages/dashboard.js') }}"></script>
+    {{-- <script src="{{ asset('/tempek/dist/js/pages/dashboard.js') }}"></script> --}}
+
+    {{-- mapl --}}
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <script>
+        var mymap = L.map('mapid').setView([-7.0180152, 113.8733319], 13);
+
+        L.tileLayer(
+            'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+                maxZoom: 18,
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+                    'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                id: 'mapbox/streets-v11',
+                tileSize: 512,
+                zoomOffset: -1
+            }).addTo(mymap);
+        L.marker([-7.0180152, 113.8733319]).addTo(mymap)
+            .bindPopup("<b>Program ini masih cacad kayak yang buar!</b><br />Firman Abani.").openPopup();
+    </script>
 </body>
 
 </html>
