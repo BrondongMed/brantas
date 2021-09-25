@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class lingkungan_hidup extends Model
+class larap extends Model
 {
-    protected $table = 'lingkungan_hidups';
+    protected $table = 'laraps';
     
     public function sungais()
     {
