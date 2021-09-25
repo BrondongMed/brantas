@@ -60,4 +60,6 @@ class sungaiController extends Controller
 
         return back();
     }
+//baru//
+
 }

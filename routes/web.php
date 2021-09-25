@@ -30,3 +30,5 @@ Route::post('/larap/add', 'sungaiController@larapadd');
 
 Route::get('/home', 'sungaiController@home')->name('home');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+/* ======================== baru ==================== */

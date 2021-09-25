@@ -26,7 +26,7 @@
                 <input type="text" name="tahun" class="form-control">
             </div>
             <div class="form-group">
-                <label for="">File`</label>
+                <label for="">File</label>
                 <input type="text" name="file" class="form-control">
             </div>
             <button type="submit" class="btn btn-warning">Simpan</button>
