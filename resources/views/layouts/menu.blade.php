@@ -57,15 +57,29 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="">
-                <a href="/lh" class="nav-link">
-                    <i class="nav-icon fas fa-th"></i>
-                    <p>
-                        PEMBANGUNAN
-                        <span class="right badge badge-danger"></span>
-                    </p>
-                </a>
+        <li class="nav-item">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                    PEMBANGUNAN
+                    <i class="fas fa-angle-left right"></i>
+                </p>
             </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="/kontrak" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Kontrak</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/kontrak/hasil" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Hasil Kontrak</p>
+                    </a>
+                </li>
+            </ul>
+        </li>
         </li>
         <li class="nav-item">
             <a href="">
@@ -113,10 +127,10 @@
         </li>
         <li class="nav-item">
             <a href="">
-                <a href="/lh" class="nav-link">
-                    <i class="nav-icon fas fa-th"></i>
+                <a href="/logout" class="nav-link">
+                    <i class="nav-icon fas fa-sign-out-alt"></i>
                     <p>
-                       PETA LOKASI PAKET PEKERJAAN YANG SEDANG BERJALAN
+                        Info mazeeeehhh !!!
                         <span class="right badge badge-danger"></span>
                     </p>
                 </a>

@@ -34,5 +34,12 @@ Route::get('/admin/delSungai/{id}', 'sungaiController@delSungai');
 Route::get('/admin/{id}/edit', 'sungaiController@edit');
 Route::put('/admin/update', 'sungaiController@update');
 
+// kontrak
+Route::get('/kontrak', 'KontrakController@index');
+Route::post('/kontrak/add', 'KontrakController@add');
+Route::post('/kontrak/save', 'KontrakController@save');
+Route::get('/kontrak/hasil', 'KontrakController@show');
+Route::get('/kontrak/add/utils/{id}', 'KontrakController@addUtils');
 
+// end kontrak
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
