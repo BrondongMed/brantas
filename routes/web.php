@@ -38,8 +38,20 @@ Route::put('/admin/update', 'sungaiController@update');
 Route::get('/kontrak', 'KontrakController@index');
 Route::post('/kontrak/add', 'KontrakController@add');
 Route::post('/kontrak/save', 'KontrakController@save');
-Route::get('/kontrak/hasil', 'KontrakController@show');
+Route::get('/kontrak/hasil', 'KontrakController@show')->name('kontrak.hasil');
+Route::patch('/kontrak/updatePenyedia', 'KontrakController@updatePenyedia');
+Route::get('/kontrak/{id}/addPenyedia', 'KontrakController@addPenyedia');
+Route::post('/kontrak/savePenyedia', 'KontrakController@savePenyedia');
+Route::get('/kontrak/{id}/addLelang', 'KontrakController@addLelang');
+Route::post('/kontrak/saveLelang', 'KontrakController@saveLelang');
+Route::delete('/kontrak/delLelang/{id}', 'KontrakController@delLelang');
+Route::get('/kontrak/{id}/addDataKontrak', 'KontrakController@addDataKontrak');
+Route::post('/kontrak/saveDataKontrak', 'KontrakController@saveDataKontrak');
+Route::delete('/kontrak/delDataKontrak/{id}', 'KontrakController@delDataKontrak');
+
 Route::get('/kontrak/add/utils/{id}', 'KontrakController@addUtils');
+Route::post('/kontrak/saveUtil', 'KontrakController@saveUltis');
+Route::get('/kontrak/{id}/showUtils', 'KontrakController@showUtils');
 
 // end kontrak
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');

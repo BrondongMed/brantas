@@ -32,6 +32,8 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
         crossorigin="" />
+        {{-- datatable --}}
+    <link rel="stylesheet" href="//cdn.datatables.net/1.12.0/css/jquery.dataTables.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -237,6 +239,7 @@
     <!-- ./wrapper -->
 
     <!-- jQuery -->
+    
     <script src="{{ asset('/tempek/plugins/jquery/jquery.min.js') }}"></script>
     <!-- jQuery UI 1.11.4 -->
     <script src="{{ asset('/tempek/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
@@ -269,9 +272,12 @@
     <!-- AdminLTE for demo purposes -->
     <script src="{{ asset('/tempek/dist/js/demo.js') }}"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    {{-- datatable --}}
+    <script src="//cdn.datatables.net/1.12.0/js/jquery.dataTables.min.js"></script>
     {{-- <script src="{{ asset('/tempek/dist/js/pages/dashboard.js') }}"></script> --}}
 
     {{-- mapl --}}
+    @yield("script")
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>

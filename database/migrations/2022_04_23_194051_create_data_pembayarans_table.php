@@ -22,6 +22,7 @@ class CreateDataPembayaransTable extends Migration
             $table->unsignedBigInteger('kontrak_id');
             $table->foreign('kontrak_id')->references('id')->on('kontrak')->onDelete('cascade');
             $table->timestamps();
+            
         });
     }
 

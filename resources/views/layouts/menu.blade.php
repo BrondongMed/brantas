@@ -130,7 +130,7 @@
                 <a href="/logout" class="nav-link">
                     <i class="nav-icon fas fa-sign-out-alt"></i>
                     <p>
-                        Info mazeeeehhh !!!
+                        LOGOUT !!!
                         <span class="right badge badge-danger"></span>
                     </p>
                 </a>

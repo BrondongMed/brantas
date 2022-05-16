@@ -10,7 +10,7 @@
     <form action=" {{ url('/kontrak/add') }}" method="post">
       @csrf
       <div class="form-group">
-        <label for="">Nama Sungai</label>
+        <label for="">Nama Daerah Irigasi</label>
         <select name="sungai_id" id="" class="form-control" required>
             @foreach ($sungais as $sungai)     
             <option value="{{ $sungai->id }}">{{ $sungai->nama_sungai }}</option>

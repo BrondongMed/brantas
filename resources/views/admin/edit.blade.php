@@ -3,7 +3,7 @@
 <div class="card">
   <div class="card-header">
     <div class="card-title">
-      Sungai ALL
+      Daerah Irigasi ALL
     </div>
   </div>
   <div class="card-body">
@@ -11,7 +11,7 @@
     @method('put')
       @csrf
       <div class="form-group">
-        <label for="">Nama Sungai</label>
+        <label for="">Nama Daerah Irigasi</label>
         <input type="hidden" name="sungai_id" value="{{ $sungai->id }}">
         <input type="text" name="sungai" value="{{ $sungai->nama_sungai }}" class="form-control">
       </div>

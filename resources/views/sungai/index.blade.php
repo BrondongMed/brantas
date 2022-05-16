@@ -7,7 +7,7 @@
           <div class="inner">
               <h3>{{ $wakil_nama->count() }}</h3>
 
-              <p>Sungai</p>
+              <p>Daerah Irigasi</p>
           </div>
           <div class="icon">
               <i class="fas fa-bacon"></i>
@@ -58,7 +58,7 @@
               <form action=" {{ url('/sungai/add') }}" method="post">
                   @csrf
                   <div class="form-group">
-                      <label for="">Nama Sungai</label>
+                      <label for="">Nama Daerah Irigasi</label>
                       <input type="text" name="sungai" class="form-control">
                   </div>
 
@@ -69,15 +69,16 @@
                   <table class="table table-bordered">
                       <thead>
                           <tr>
-                              <th style="width: 10px">#</th>
-                              <th>Sungai</th>
-                              <th>#</th>
+                              <th style="width: 10px">No</th>
+                              <th>Daerah Irigasi</th>
+                              <th>Tindakan</th>
                           </tr>
                       </thead>
                       <tbody>
+                          @php $no = 1 @endphp
                           @foreach ($wakil_nama as $data)
                               <tr>
-                                  <td>{{ $data->id }}</td>
+                                  <td>{{ $no++ }}</td>
                                   <td>{{ $data->nama_sungai }}</td>
                                   <td>
                                       <a href="{{ url('/admin/' . $data->id . '/edit') }}">

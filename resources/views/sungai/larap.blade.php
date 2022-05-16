@@ -10,7 +10,7 @@
         <form action="{{ url('lh/add') }}" method="post">
             @csrf
             <div class="form-group">
-                <label for="">Nama Sungai</label>
+                <label for="">Nama Daerah Irigasi</label>
                 <select name="sungai_id" id="" class="form-control">
                     @foreach($sungais as $sungai)
                     <option value="{{ $sungai->id }}">{{ $sungai->nama_sungai }}</option>
@@ -37,7 +37,7 @@
         <table class="table table-bordered">
             <thead>
                 <th>No</th>
-                <th>Nama Sungai</th>
+                <th>Nama Daerah Irigasi</th>
                 <th>Nomor Kontrak</th>
                 <th>Tahun</th>
                 <th>File</th>
